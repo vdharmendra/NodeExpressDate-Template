@@ -5,16 +5,30 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.set("view engine", 'ejs');
+
 app.get("/", function(req, res){
     var today = new Date();
     var currentday = today.getDay();
+    var day = "";
 
+    // ##### Chap: 1
     // console.log(currentday);
+    // if(currentday == 6 || currentday == 0){
+    //     res.write("<h1>Yay it's the weekend</h1>");
+    // }else{
+    //     res.sendFile(__dirname+"/index.html");
+    // }
+
+
+    // ##### Chap: 2
+    console.log(currentday);
     if(currentday == 6 || currentday == 0){
-        res.write("<h1>Yay it's the weekend</h1>");
+        day = "weekendddd";
     }else{
-        res.sendFile(__dirname+"/index.html");
+        day = "weekdayyyy";
     }
+    res.render("list", {kindofday: day});
     
 });
 
