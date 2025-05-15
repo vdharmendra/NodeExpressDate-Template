@@ -72,9 +72,9 @@ app.listen(3000, function(){
     console.log("Server Up and Running 3000");
 });
 
-
+```
 LISTS.EJS FILES
-
+```bash
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,8 +90,10 @@ LISTS.EJS FILES
 </html>
 ```
 #### 📁 Sample Folder Structure
+```bash
 NodeExpressDate/
 ├── node_modules/
 ├── app.js
 ├── package.json
 └── README.md
+```
