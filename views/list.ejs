@@ -7,7 +7,18 @@
 
 </head>
 <body>
-    <h1>it's a <%= kindofday %></h1>
-    <p>why are you not work</p>
+    <!-- Chapter: 1 -->
+    <!-- <h1>it's a <%= kindofday %></h1>
+    <p>why are you not work</p> -->
+
+    <!-- Chapter: 2 -->
+    <!-- RUNNING CODE INSIDE THE EJS TEMPLATE -->
+    <% if(kindofday === "Saturday" || kindofday === 'Sunday') { %>
+        <h1 style="color: purple;">it's a <%= kindofday %></h1>
+        <p style="color: purple;">why are you working</p>
+    <% }else{ %>
+        <h1 style="color: blue;">it's a <%= kindofday %></h1>
+        <p style="color: purple;">why are you not working</p>
+    <% } %>
 </body>
 </html>
