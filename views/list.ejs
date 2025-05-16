@@ -7,18 +7,33 @@
 
 </head>
 <body>
-    <!-- Chapter: 1 -->
-    <!-- <h1>it's a <%= kindofday %></h1>
+    <!-- Chapter: 2 -->
+    <!-- <h1>it's a <%= kindofDay %></h1>
     <p>why are you not work</p> -->
 
-    <!-- Chapter: 2 -->
+    <!-- Chapter: 3 -->
     <!-- RUNNING CODE INSIDE THE EJS TEMPLATE -->
-    <% if(kindofday === "Saturday" || kindofday === 'Sunday') { %>
-        <h1 style="color: purple;">it's a <%= kindofday %></h1>
+    <!-- <% if(kindofDay === "Saturday" || kindofDay === 'Sunday') { %>
+        <h1 style="color: purple;">it's a <%= kindofDay %></h1>
         <p style="color: purple;">why are you working</p>
     <% }else{ %>
-        <h1 style="color: blue;">it's a <%= kindofday %></h1>
+        <h1 style="color: blue;">it's a <%= kindofDay %></h1>
         <p style="color: purple;">why are you not working</p>
-    <% } %>
+    <% } %> -->
+
+    <!-- Chapter: 4 -->
+    <h1>it's a <%= kindofDay %></h1>
+    <%= newlistItems %>
+    <ul>
+        <% for(var i = 0; i < newlistItems.length; i++){ %>
+            <li> <%= newlistItems[i] %> </li>
+        <% } %>
+    </ul>
+
+    <!-- Form Section -->
+    <form action="/" method="post">
+        <input type="text" name="addNewItem" id="addNewItem" value="">
+        <button type="button" name="button">Add</button>
+    </form>
 </body>
 </html>
